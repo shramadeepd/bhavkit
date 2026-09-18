@@ -10,6 +10,7 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
+from . import __version__
 from .calendar import NSE_HOLIDAYS, trading_day_candidates
 from .config import (
     Config,
@@ -40,8 +41,20 @@ log = get_logger()
 _DEFAULT_END = date.today()
 
 
+def _version_callback(value: bool) -> None:
+    if value:
+        console.print(f"bhavkit {__version__}")
+        raise typer.Exit()
+
+
 @app.callback()
-def _main(verbose: bool = typer.Option(False, "--verbose", "-v", help="Debug logging.")) -> None:
+def _main(
+    verbose: bool = typer.Option(False, "--verbose", "-v", help="Debug logging."),
+    version: bool = typer.Option(
+        False, "--version", "-V", callback=_version_callback,
+        help="Show version and exit.",
+    ),
+) -> None:
     setup_logging(verbose)
 
 
