@@ -1,0 +1,25 @@
+# runtime artifacts
+bhavkit.duckdb
+data/
+*.duckdb
+*.duckdb.wal
+plan.md
+
+# auto-created per-machine config (example stays tracked)
+bhavkit.toml
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# jupyter
+.ipynb_checkpoints/
+
+# os
+.DS_Store
