@@ -1,7 +1,13 @@
 # bhavkit CLI reference
 
 `bhavkit` is a Typer CLI. This page documents every command and option; run
-`bhavkit <command> --help` for the live version. Global option: `--verbose` / `-v`.
+`bhavkit <command> --help` for the live version. Global options:
+`--verbose`/`-v` (debug logging) and `--version`/`-V` (print the version):
+
+```
+$ bhavkit --version
+bhavkit 0.1.1
+```
 
 Three thin override flags exist on almost every command (`--config`, `--db-path`,
 `--data-dir`); they take precedence over the config file and `BHAV_*` env vars
