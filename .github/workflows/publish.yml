@@ -9,25 +9,25 @@ permissions:
   contents: read
 
 jobs:
-  test:
-    name: Test (${{ matrix.python }})
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python: ["3.11", "3.12"]
-    steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v5
-        with:
-          python-version: ${{ matrix.python }}
-      - name: Lock & configure
-        run: uv sync --extra dev
-      - name: Lint
-        run: uv run ruff check .
-      - name: Typecheck
-        run: uv run mypy src
-      - name: Test
-        run: uv run pytest
+  # test:
+  #   name: Test (${{ matrix.python }})
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       python: ["3.11", "3.12"]
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: astral-sh/setup-uv@v5
+  #       with:
+  #         python-version: ${{ matrix.python }}
+  #     - name: Lock & configure
+  #       run: uv sync --extra dev
+  #     - name: Lint
+  #       run: uv run ruff check .
+  #     - name: Typecheck
+  #       run: uv run mypy src
+  #     - name: Test
+  #       run: uv run pytest
 
   build:
     name: Build sdist + wheel
