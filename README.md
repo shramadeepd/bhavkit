@@ -7,7 +7,6 @@ Exchange's raw bhavcopy archives into a queryable, validated, analytics-ready
 dataset. It handles the fiddly parts of working with NSE data — archive
 downloading, format normalization, validation, deduplication, and gap tracking —
 so you can spend your time analyzing markets instead of wrestling with files.
-
 ---
 
 ## Features
