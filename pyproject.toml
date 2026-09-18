@@ -4,6 +4,25 @@ version = "0.1.0"
 description = "Download, clean, and store historical NSE bhavcopy data in a local DuckDB database"
 readme = "README.md"
 requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Shramadeep" }]
+keywords = ["nse", "bhavcopy", "stock-market", "india", "duckdb", "data-engineering", "analytics"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 dependencies = [
     "duckdb>=1.0",
     "httpx>=0.27",
@@ -13,6 +32,11 @@ dependencies = [
     "rich>=13.7",
     "typer>=0.12",
 ]
+
+[project.urls]
+Documentation = "https://github.com/shramadeep/bhavkit#readme"
+Issues = "https://github.com/shramadeep/bhavkit/issues"
+Source = "https://github.com/shramadeep/bhavkit"
 
 [project.optional-dependencies]
 dev = [

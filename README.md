@@ -351,5 +351,4 @@ The implementation tree lives under `src/bhavkit/` — `cli.py` (commands),
 
 ## License
 
-Not yet declared. Add a `LICENSE` file (e.g. MIT) and a `license` field in
-`pyproject.toml` before distributing the package.
+Released under the [MIT License](./LICENSE).
